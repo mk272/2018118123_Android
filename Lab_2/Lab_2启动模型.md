@@ -61,3 +61,29 @@ Hello2中settupButtons（）方法TOHELLO1按钮点击事件的代码如图所�
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_8.png)
 
 可以看到系统创建了两个不同的Hello1实例，由于在Hello2活动中再次启动Hello1时，栈顶活动已经变成了Hello2，因此会创建一个新的Hello1实例。
+
+3、singleTask
+
+当活动的 启动模式指定为singleTask，每次启动该活动时系统首先会在返回栈中检查是否存在该活动的实例，如果发现已经存在则直接使用该实例，并把在这个活动之上的所有活动统统出栈，如果没有发现就会创建一个新的活动实例。
+
+AndroidManifest.xml中Hello3的启动模式
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/3_1.png)
+
+现运行程序，在Hello1界面点击TOHELLO3按钮进入到Hello3，然后在Hello3点击按钮TOHELLO1到Hello1，再按TOHELLO3到Hello3.
+
+查看日志中的打印信息，如图
+
+在主界面点击TOHELLO3按钮的日志，创建了一个新的Hello3实例。
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/3_2.png)
+
+在Hello3点击按钮TOHELLO1的日志，创建了一个新的Hello1实例
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/3_3.png)
+
+进入Hello1点击按钮TOHELLO3的日志，没有创建新的实例
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/3_4.png)
+
+程序启动时，点击TOHELLO3按钮进入Hello3活动，在Hello3活动点击TOHELLO1按钮进入Hello1活动。在Hello1活动中启动Hello3活动时，发现返回栈中已经存在一个Hello3的实例，并且是在Hello1的下面。2-onDestroy表Hello1从返回栈中出栈，此时Hello3成为了栈顶的活动。
