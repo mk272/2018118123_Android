@@ -87,3 +87,27 @@ AndroidManifest.xml中Hello3的启动模式
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/3_4.png)
 
 程序启动时，点击TOHELLO3按钮进入Hello3活动，在Hello3活动点击TOHELLO1按钮进入Hello1活动。在Hello1活动中启动Hello3活动时，发现返回栈中已经存在一个Hello3的实例，并且是在Hello1的下面。2-onDestroy表Hello1从返回栈中出栈，此时Hello3成为了栈顶的活动。
+
+4、singleInstance
+
+AndroidManifest.xml中Hello2的启动模式，如图所示
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_1.png)
+
+在Hello1的onCreate()方法中添加语句
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_2.png)
+
+在Hello2的onCreate()方法中添加语句
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_3.png)
+
+在Hello3的onCreate()方法中添加语句
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_4.png)
+
+运行程序，日志截图如下
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_5.png)
+
+Hello2的Task id 不同于 Hello1和Hello3，这说明Hello2确实是存放在一个单独的返回栈里的，而且这个栈中只有Hello2这一个活动。
