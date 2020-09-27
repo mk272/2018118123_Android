@@ -1,3 +1,15 @@
+## 实验二
+
+### 实验要求
+
+在实际的项目中我们应该根据特定的需求为每个活动指定恰当的启动模式。运行程序，观察不同活动在不同启动模式下运行的状态
+
+### 实验目的
+
+掌握四种启动模式的概念，深入了解四种启动模式的异同。
+
+### 实验内容
+
 1、standard 
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/1_1.png)
@@ -38,19 +50,19 @@ AndroidManifest.xml中Hello1的启动模式，如图所示
 
 （2）当Hello1活动不是一直处于栈顶时的情况
 
-Hello1中onCreate（）的代码如图所示
+修改Hello1中onCreate（）的代码如图所示
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_3.png)
 
-Hello1中settupButtons（）方法TOHELLO2按钮点击事件的代码如图所示
+修改Hello1中settupButtons（）方法TOHELLO2按钮点击事件的代码如图所示
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_4.png)
 
-Hello2中onCreate（）方法代码如图所示
+修改Hello2中onCreate（）方法代码如图所示
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_5.png)
 
-Hello2中settupButtons（）方法TOHELLO1按钮点击事件的代码如图所示
+修改Hello2中settupButtons（）方法TOHELLO1按钮点击事件的代码如图所示
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_6.png)
 
@@ -111,3 +123,13 @@ AndroidManifest.xml中Hello2的启动模式，如图所示
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_5.png)
 
 Hello2的Task id 不同于 Hello1和Hello3，这说明Hello2确实是存放在一个单独的返回栈里的，而且这个栈中只有Hello2这一个活动。
+
+### 实验总结
+
+1、standard是活动默认的启动模式，在不进行显式指定的情况下，所有的活动都会自动使用这种启动模式。对于standard模式的活动，系统不会在乎这个活动是否已经在返回栈中存在，每次启动的时候都会创建一个该活动的实例。
+
+2、在有些情况下，standard模式不太合理，活动明明已经在栈顶了，为什么再次启动的时候还需要再次创建一个新的活动实例呢？这个时候可以用singleTop模式，当活动的模式指定为singleTop了，在启动活动的时候如果发现返回栈的栈顶已经是该活动，则认为可以直接使用它，不会再创建新的活动实例。
+
+3、当活动的模式指定为singleTask后，每次启动活动时先会在返回栈中检查是否存该互动的实例，如果有，则使用，并把在这个活动之上的所有互动统统出栈，如果没有则创建一个新的活动实例。
+
+4、指定为singleInstance模式的活动会启用一个新的返回栈来管理活动。singleInstance模式下会有一个单独的返回栈来管理这个活动，不管是哪一个程序来访问这个活动，都使用的是同一个返回栈。
