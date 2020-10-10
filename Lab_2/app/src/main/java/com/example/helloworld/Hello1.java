@@ -17,6 +17,8 @@ public class Hello1 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Log.d("Hello1",this.toString());
+        Log.d("Hello1","Task id is"+getTaskId());
         setContentView(R.layout.hello_world_layout);
         objCount++;
         mObjCount = objCount;
@@ -91,8 +93,15 @@ public class Hello1 extends AppCompatActivity implements View.OnClickListener {
 
         b = (Button) findViewById(R.id.btToHello1);
         b.setOnClickListener(this);
+
         b = (Button) findViewById(R.id.btToHello2);
-        b.setOnClickListener(this);
+       // b.setOnClickListener(this);
+        b.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(Hello1.this,Hello2.class);
+                startActivity(intent);
+            }
+        });
         b = (Button) findViewById(R.id.btToHello3);
         b.setOnClickListener(this);
 

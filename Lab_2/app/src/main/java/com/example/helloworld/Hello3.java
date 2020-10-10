@@ -13,6 +13,8 @@ public class Hello3 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Log.d("Hello3",this.toString());
+        Log.d("Hello3","Task id is"+getTaskId());
         setContentView(R.layout.activity_hello3);
         Log.d(TAG, "onCreate execute");
         setTitle("Hello3");
@@ -89,4 +91,11 @@ public class Hello3 extends AppCompatActivity implements View.OnClickListener {
         b.setOnClickListener(this);
 
     }
+
+    protected void onRestart(){
+        super.onRestart();
+        Log.d("Hello3","onRestart");
+    }
+
+
 }
