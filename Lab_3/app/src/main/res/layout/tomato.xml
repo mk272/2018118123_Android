@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="未成熟的西红柿"
+        android:textSize="25dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="生吃危险更大"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  未成熟的西红柿中含有毒性物质叫龙葵素，实用这种未成熟的青色西红柿，口腔有苦涩感，吃后可能会出现恶心、呕吐等
+中毒症状，生吃危险性更大。不过，也有成熟之后也是青色的西红柿品种。"
+        android:textSize="15dp"/>
+</LinearLayout>
+

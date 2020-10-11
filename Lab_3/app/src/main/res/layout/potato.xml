@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="发芽土豆"
+        android:textSize="25dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="极易中毒"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  储存事件稍长，马铃薯表面会长出绿芽。马铃薯内含有毒物质龙葵碱，发芽马铃薯含有
+龙葵碱较高，进食后极易中毒，因此应禁止使用发芽马铃薯制作菜肴。"
+        android:textSize="15dp"/>
+</LinearLayout>
