@@ -8,13 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="发芽土豆"
+        android:text="隔夜的西瓜"
         android:textSize="43dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="极易中毒"
+        android:text="容易腹泻"
         android:textSize="30dp"/>
     <ProgressBar
         android:layout_width="match_parent"
@@ -25,8 +25,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="  储存时间稍长，马铃薯表面会长出绿芽。马铃薯内含有毒物质龙葵碱，发芽马铃薯含有
-龙葵碱较高，进食后极易中毒，因此应禁止使用发芽马铃薯制作菜肴。"
+        android:text="  隔夜西瓜容易滋生细菌，大量细菌进入肠道后又跟着血液“跑”遍全身，侵入器官。感染性休克会导致组织细胞缺血缺氧、代谢紊乱、功能障碍，
+甚至多器官功能衰竭，死亡率也比较高。如果抢救不及时，就会引发生命危险。"
         android:textSize="28dp"/>
     <ProgressBar
         android:layout_width="match_parent"
@@ -43,5 +43,6 @@
         android:layout_marginLeft="130dip"
         android:layout_marginTop="20dip"
         />
-
 </LinearLayout>
+
+

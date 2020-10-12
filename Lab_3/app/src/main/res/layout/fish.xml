@@ -8,13 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="发芽土豆"
+        android:text="鱼胆"
         android:textSize="43dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="极易中毒"
+        android:text="生吞、煮熟、泡酒喝都含毒"
         android:textSize="30dp"/>
     <ProgressBar
         android:layout_width="match_parent"
@@ -25,8 +25,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="  储存时间稍长，马铃薯表面会长出绿芽。马铃薯内含有毒物质龙葵碱，发芽马铃薯含有
-龙葵碱较高，进食后极易中毒，因此应禁止使用发芽马铃薯制作菜肴。"
+        android:text="  鱼胆的胆汁中含有胆酸、牛黄胆酸、牛黄去氧胆酸、氢氰酸等不同的毒素，轻重氢氰酸毒性最强，比同剂量的砒霜毒性还大。中毒后，一般
+最早都出现胃肠道症状，经过消化道吸收后，能损害人体肝、肾，使组织变形坏死。毒素也可损伤脑细胞和心肌，造成神经系统和心血管系统的病变。"
         android:textSize="28dp"/>
     <ProgressBar
         android:layout_width="match_parent"
@@ -41,7 +41,8 @@
         android:text="返回"
         android:textSize="25dp"
         android:layout_marginLeft="130dip"
-        android:layout_marginTop="20dip"
+        android:layout_marginTop="5dip"
         />
-
 </LinearLayout>
+
+

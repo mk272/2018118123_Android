@@ -8,13 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="发芽土豆"
+        android:text="腐烂的生姜"
         android:textSize="43dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="极易中毒"
+        android:text="可诱发食道癌、肝癌"
         android:textSize="30dp"/>
     <ProgressBar
         android:layout_width="match_parent"
@@ -25,8 +25,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="  储存时间稍长，马铃薯表面会长出绿芽。马铃薯内含有毒物质龙葵碱，发芽马铃薯含有
-龙葵碱较高，进食后极易中毒，因此应禁止使用发芽马铃薯制作菜肴。"
+        android:text="  老话说“烂姜不烂味”，但专家介绍，生姜腐烂后会产生有害物质“黄樟素”，会诱发食道癌、肝癌等。
+建议不要将生姜放在保鲜袋里存储，最好是用报纸包起来放在阴凉初；每天生姜的摄取量不宜超过10克。"
         android:textSize="28dp"/>
     <ProgressBar
         android:layout_width="match_parent"
@@ -43,5 +43,6 @@
         android:layout_marginLeft="130dip"
         android:layout_marginTop="20dip"
         />
-
 </LinearLayout>
+
+

@@ -8,13 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="发芽土豆"
+        android:text="发红的甘蔗"
         android:textSize="43dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="极易中毒"
+        android:text="霉变含毒"
         android:textSize="30dp"/>
     <ProgressBar
         android:layout_width="match_parent"
@@ -25,8 +25,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="  储存时间稍长，马铃薯表面会长出绿芽。马铃薯内含有毒物质龙葵碱，发芽马铃薯含有
-龙葵碱较高，进食后极易中毒，因此应禁止使用发芽马铃薯制作菜肴。"
+        android:text="  如果看到甘泽里有红色丝状物，证明已经霉变了。霉变甘蔗会产生强烈的
+神经毒素，严重可致呼吸衰竭而死亡，幸存者也可能丧失生活能力。"
         android:textSize="28dp"/>
     <ProgressBar
         android:layout_width="match_parent"
@@ -43,5 +43,5 @@
         android:layout_marginLeft="130dip"
         android:layout_marginTop="20dip"
         />
-
 </LinearLayout>
+

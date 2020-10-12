@@ -8,7 +8,6 @@
 
     <Button
         android:id="@+id/button1"
-        android:text="Button1"
         android:layout_gravity="left|top"
         android:background="@drawable/tomato"
         app:layout_widthPercent="40%"
@@ -17,15 +16,13 @@
 
     <Button
         android:id="@+id/button2"
-        android:text="Button2"
         android:layout_gravity="right|top"
-        android:background="@drawable/apple"
+        android:background="@drawable/watermelon"
         app:layout_widthPercent="40%"
         app:layout_heightPercent="25%"
         />
     <Button
         android:id="@+id/button3"
-        android:text="Button3"
         android:background="@drawable/ganzhe"
         android:layout_gravity="left|center"
         app:layout_widthPercent="40%"
@@ -33,7 +30,6 @@
         />
     <Button
         android:id="@+id/button4"
-        android:text="Button4"
         android:background="@drawable/potato"
         android:layout_gravity="right|center"
         app:layout_widthPercent="40%"
@@ -41,15 +37,13 @@
         />
     <Button
         android:id="@+id/button5"
-        android:text="Button5"
-        android:background="@drawable/drink"
+        android:background="@drawable/jiang"
         android:layout_gravity="left|bottom"
         app:layout_widthPercent="40%"
         app:layout_heightPercent="25%"
         />
     <Button
         android:id="@+id/button6"
-        android:text="Button6"
         android:background="@drawable/fish"
         android:layout_gravity="right|bottom"
         app:layout_widthPercent="40%"

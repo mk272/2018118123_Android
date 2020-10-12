@@ -21,6 +21,11 @@
         </activity>
         <activity android:name=".Tomato">
         </activity>
+        <activity android:name=".Watermelon">
+        </activity>
+        <activity android:name=".Sugarcane"></activity>
+        <activity android:name=".Ginger"></activity>
+        <activity android:name=".Fish"></activity>
     </application>
 
 </manifest>

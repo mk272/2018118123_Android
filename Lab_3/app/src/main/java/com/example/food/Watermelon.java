@@ -11,18 +11,14 @@ import android.widget.Button;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Tomato extends AppCompatActivity implements View.OnClickListener{
+public class Watermelon extends AppCompatActivity implements View.OnClickListener{
     private final static String TAG = "Tomato";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tomato);
-        /**ActionBar actionBar=getSupportActionBar();
-        if(actionBar!=null){
-            actionBar.hide();
-        }**/
+        setContentView(R.layout.watermelon);
         settupButtons();
-        setTitle("西红柿");
+        setTitle("西瓜");
     }
     @Override
     protected void onStart() {
@@ -60,9 +56,9 @@ public class Tomato extends AppCompatActivity implements View.OnClickListener{
         Log.d(TAG, "onDestroy");
     }
     public void onClick(View v) {
-        if (v.getId() == R.id.button1) {
+        if (v.getId() == R.id.button2) {
             Intent intent;
-            intent = new Intent(this, Tomato.class);
+            intent = new Intent(this, Watermelon.class);
             startActivity(intent);
         }
     }
@@ -72,7 +68,7 @@ public class Tomato extends AppCompatActivity implements View.OnClickListener{
         //b.setOnClickListener(this);
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Tomato.this, MainActivity.class);
+                Intent intent = new Intent(Watermelon.this, MainActivity.class);
                 startActivity(intent);
             }
         });

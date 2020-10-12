@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         settupButtons();
+        setTitle("防食物中毒指南");
         /**
         ActionBar actionBar=getSupportActionBar();
         if(actionBar!=null){
@@ -91,11 +92,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
         });
+        b = (Button) findViewById(R.id.button2);
+        //b.setOnClickListener(this);
+        b.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Watermelon.class);
+                startActivity(intent);
+            }
+        });
+        b = (Button) findViewById(R.id.button3);
+        //b.setOnClickListener(this);
+        b.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Sugarcane.class);
+                startActivity(intent);
+            }
+        });
         b = (Button) findViewById(R.id.button4);
         //b.setOnClickListener(this);
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,Potato.class);
+                startActivity(intent);
+            }
+        });
+        b = (Button) findViewById(R.id.button5);
+        //b.setOnClickListener(this);
+        b.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Ginger.class);
+                startActivity(intent);
+            }
+        });
+        b = (Button) findViewById(R.id.button6);
+        //b.setOnClickListener(this);
+        b.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Fish.class);
                 startActivity(intent);
             }
         });
