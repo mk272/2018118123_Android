@@ -97,3 +97,11 @@ private void settupButtons() {
 ```
 
 为主界面的6个按钮设置点击事件，点击按钮就会跳转到各自内容说明的界面。
+
+------
+
+### 实验总结
+
+1、LinearLayout布局支持使用layout_weight属性实现按比例指定控件的大小。FrameLayout、RelativeLayout布局不支持。
+
+2、百分比布局：在这种布局中，可以不再使用wrap_content、math_parent等方式来指定控件的大小，而是允许直接指定控件在布局中所占的百分比，这样的话就可以轻松实现平分布局 甚至是任意比例分割布局的效果。
