@@ -80,7 +80,8 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
                                 Fruit fruit2 = mFruitList.get(mFruitList.indexOf(fruit));
                                 fruit2.setName(editText.getText().toString());
                                 mFruitList.set(mFruitList.indexOf(fruit),fruit2);
-                                Toast.makeText(v.getContext(),"成功修改为："+editText.getText().toString(),Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(v.getContext(),"成功修改为："+editText.getText().toString(),Toast.LENGTH_SHORT).show();
+                                Toast.makeText(v.getContext(),"修改成功",Toast.LENGTH_SHORT).show();
                                 //刷新View显示
                                 notifyItemChanged(position);
                             }
@@ -92,7 +93,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
                 Fruit fruit = mFruitList.get(position);
-                Toast.makeText(v.getContext(), "you clicked image " + fruit.getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), "你点击了图片 " + fruit.getName(), Toast.LENGTH_SHORT).show();
 
             }
         });
