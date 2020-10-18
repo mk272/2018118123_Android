@@ -20,7 +20,7 @@
 
 [实验项目](https://github.com/mk272/2018118123_Android/tree/master/Lab_3/Project)
 
-[实验报告](https://github.com/mk272/2018118123_Android/blob/master/Lab_3/Lab_3 UI界面.md)
+[实验报告](https://github.com/mk272/2018118123_Android/blob/master/Lab_3/Lab_3%20UI界面.md)
 
 ------
 
@@ -28,7 +28,7 @@
 
 [实验项目](https://github.com/mk272/2018118123_Android/tree/master/Lab_4/Project)
 
-[实验报告](https://github.com/mk272/2018118123_Android/blob/master/Lab_4/Lab_4 RecyclerView.md)
+[实验报告](https://github.com/mk272/2018118123_Android/blob/master/Lab_4/Lab_4%20RecyclerView.md)
 
 ------
 
