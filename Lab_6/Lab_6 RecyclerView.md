@@ -18,9 +18,9 @@
 
 创建RecyclerView项目，运行程序，项目界面可滚动。
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/1_1.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_6/Lab_6pictures/1_1.png)
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/1_2.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_6/Lab_6pictures/1_2.png)
 
 2、 项目界面增加水果
 
@@ -28,9 +28,9 @@
 
 运行界面如下
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/2_1.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_6/Lab_6pictures/2_1.png)
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/2_2.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_6/Lab_6pictures/2_2.png)
 
 3、 项目增加点击事件
 
@@ -40,21 +40,21 @@
 
 界面显示
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/3_1.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_6/Lab_6pictures/3_1.png)
 
 （2）点击图片下方文字
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/3_2.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_6/Lab_6pictures/3_2.png)
 
 界面弹出可编辑的文本框，框内内容为原先图片的文本内容，我们可以进行对它修改。
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/3_3.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_6/Lab_6pictures/3_3.png)
 
 点击“确定”按钮，界面会显示修改成功，并且柠檬图片下方文字已更新
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/3_4.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_6/Lab_6pictures/3_4.png)
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/3_5.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_6/Lab_6pictures/3_5.png)
 
 ------
 

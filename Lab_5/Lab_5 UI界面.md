@@ -18,7 +18,7 @@
 
 在activity_main.xml配置文件中，设置六个Button按钮属性android:layout_gravity值为left|top、right|top、left|center、right|center、left|bottom、right|bottom。即这六个按钮位于布局的左上、右上、左中、右中、左下、右下。
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab_3%20pictures/0.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_5/Lab_5%20pictures/0.png)
 
 2、界面
 
@@ -26,23 +26,23 @@
 
 在res目录下新建drawable-xhdpi目录，将按钮背景图置于此文件夹下。在activity_main.xml配置文件中，设置六个Button按钮属性android:background="@drawable/"（斜杠后为图片名），即可为按钮设置背景图。
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab_3%20pictures/1.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_5/Lab_5%20pictures/1.png)
 
 （2）、点击每个按钮，会跳转到各自内容说明的界面。用TextView编辑文本内容，底部放置一个“返回”按钮可返回主界面。
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab_3%20pictures/2.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_5/Lab_5%20pictures/2.png)
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab_3%20pictures/3.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_5/Lab_5%20pictures/3.png)
 
 
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab_3%20pictures/4.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_5/Lab_5%20pictures/4.png)
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab_3%20pictures/5.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_5/Lab_5%20pictures/5.png)
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab_3%20pictures/6.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_5/Lab_5%20pictures/6.png)
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab_3%20pictures/7.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_5/Lab_5%20pictures/7.png)
 
 3、主要代码
 
