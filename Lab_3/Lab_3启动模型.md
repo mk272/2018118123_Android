@@ -12,25 +12,25 @@
 
 1、standard 
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/1_1.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/1_1.png)
 
 Standard是活动默认的启动模式，在不进行显示指定的情况下，所有活动都会自动使用这种启动模式。活动Hello1的启动模式为standard。
 
 修改Hello1活动的onCreate（）方法和settupButtons（）方法（）
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/1_2.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/1_2.png)
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/1_3.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/1_3.png)
 
 重新运行程序，连续两次点击TOHELLO1按钮
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/1_4.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/1_4.png)
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/1_5.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/1_5.png)
 
 从打印信息可以看出，每点击一次按钮就会创建出一个新的Hello1实例。此时返回栈中也会存在3个Hello1的实例，因此此时需要连按3次back键才能退出程序。
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/1_6.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/1_6.png)
 
 2、singleTop
 
@@ -38,13 +38,13 @@ singleTop启动模式，在启动模式时如果发现返回栈的栈顶已经�
 
 AndroidManifest.xml中Hello1的启动模式，如图所示
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_1.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/2_1.png)
 
 （1）当Hello1活动一直处于栈顶时
 
 运行程序，日志截图
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_2.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/2_2.png)
 
 不管点击多少次TOHELLO1按钮，都不会有新的Hello1实例产生，因为Hello1已经处于返回栈的栈顶。
 
@@ -52,25 +52,25 @@ AndroidManifest.xml中Hello1的启动模式，如图所示
 
 修改Hello1中onCreate（）的代码如图所示
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_3.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/2_3.png)
 
 修改Hello1中settupButtons（）方法TOHELLO2按钮点击事件的代码如图所示
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_4.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/2_4.png)
 
 修改Hello2中onCreate（）方法代码如图所示
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_5.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/2_5.png)
 
 修改Hello2中settupButtons（）方法TOHELLO1按钮点击事件的代码如图所示
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_6.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/2_6.png)
 
 运行程序，在Hello1活动单击TOHELLO2按钮启动Hello2活动，在Hello界面点击TOHELLO1按钮又会重新进入到Hello1.
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_7.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/2_7.png)
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/2_8.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/2_8.png)
 
 可以看到系统创建了两个不同的Hello1实例，由于在Hello2活动中再次启动Hello1时，栈顶活动已经变成了Hello2，因此会创建一个新的Hello1实例。
 
@@ -80,7 +80,7 @@ AndroidManifest.xml中Hello1的启动模式，如图所示
 
 AndroidManifest.xml中Hello3的启动模式
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/3_1.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/3_1.png)
 
 现运行程序，在Hello1界面点击TOHELLO3按钮进入到Hello3，然后在Hello3点击按钮TOHELLO1到Hello1，再按TOHELLO3到Hello3.
 
@@ -88,15 +88,15 @@ AndroidManifest.xml中Hello3的启动模式
 
 在主界面点击TOHELLO3按钮的日志，创建了一个新的Hello3实例。
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/3_2.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/3_2.png)
 
 在Hello3点击按钮TOHELLO1的日志，创建了一个新的Hello1实例
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/3_3.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/3_3.png)
 
 进入Hello1点击按钮TOHELLO3的日志，没有创建新的实例
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/3_4.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/3_4.png)
 
 程序启动时，点击TOHELLO3按钮进入Hello3活动，在Hello3活动点击TOHELLO1按钮进入Hello1活动。在Hello1活动中启动Hello3活动时，发现返回栈中已经存在一个Hello3的实例，并且是在Hello1的下面。2-onDestroy表Hello1从返回栈中出栈，此时Hello3成为了栈顶的活动。
 
@@ -104,23 +104,23 @@ AndroidManifest.xml中Hello3的启动模式
 
 AndroidManifest.xml中Hello2的启动模式，如图所示
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_1.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/4_1.png)
 
 在Hello1的onCreate()方法中添加语句
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_2.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/4_2.png)
 
 在Hello2的onCreate()方法中添加语句
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_3.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/4_3.png)
 
 在Hello3的onCreate()方法中添加语句
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_4.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/4_4.png)
 
 运行程序，日志截图如下
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_2/Lab2_pictures/4_5.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_3/Lab3_pictures/4_5.png)
 
 Hello2的Task id 不同于 Hello1和Hello3，这说明Hello2确实是存放在一个单独的返回栈里的，而且这个栈中只有Hello2这一个活动。
 
