@@ -32,7 +32,7 @@ Intent应用
 
 2、使用隐式Intent
 
-（1）、通过在<activity>变迁下配置<intent-filter>的内容，可以指定当前活动能够响应的action和category，修改AndroidManifest.xml，如图
+（1）、通过在activity标签下配置intent-filter的内容，可以指定当前活动能够响应的action和category，修改AndroidManifest.xml，如图
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/2_1.png)
 
@@ -46,7 +46,7 @@ Intent应用
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/2_3.png)
 
-在<intent-filter>中再添加一个category的声明
+在intent-filter中再添加一个category的声明
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/2_4.png)
 
@@ -82,7 +82,7 @@ Intent应用
 
 1、Intent是Android程序中各组件之间进行交互的一种重要方式，它不仅可以指明那个当前组件想要执行的动作，还可以再不同组件之间进行传递数据。Intent一般可被用于启动活动、启动服务以及发送广播等场景。
 
-2、Intent可以分为两种：显示Intent和隐式Intent。Intent有多个构造函数的重载，其中一个是Intent(Context packageContext, Class<?>cls)。这个构造函数接收两个参数，第一个参数Context要求提供一个启动活动的上下文，第二个参数Class则是指定想要启动的活动目标，通过这个构造函数就可以构建出Intent的“意图”。
+2、Intent可以分为两种：显示Intent和隐式Intent。Intent有多个构造函数的重载，其中一个是Intent(Context packageContext, Class<?> cls)。这个构造函数接收两个参数，第一个参数Context要求提供一个启动活动的上下文，第二个参数Class则是指定想要启动的活动目标，通过这个构造函数就可以构建出Intent的“意图”。
 
 3、Activity类中提供了一个startActivity()方法，这个方法是专门用于启动活动的，它接收一个Intent参数，将构建好的Intent传入startActivity()方法中就可以启动目标活动了。
 
