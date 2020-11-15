@@ -72,7 +72,7 @@ Intent应用
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/3_3.png)
 
-指定了Intent的action时Intent.ACTION_DIAL，这是一个系统 内置的动作。然后在data部分指定了协议时tel，号码是10086。重新运行程序，在FirstActivity的界面点击按钮，结果如图
+指定了Intent的action时Intent.ACTION_DIAL，这是一个系统 内置的动作。然后在data部分指定了协议是tel，号码是10086。重新运行程序，在FirstActivity的界面点击按钮，结果如图
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_4/Lab_4pictures/3_4.png)
 
