@@ -64,9 +64,9 @@ Android内置了很多系统级别的广播，在应用程序中通过监听这�
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_7/Lab_7pictures/2_4.png)
 
-以上程序里发出的广播都是标准广播，现在发送有序广播。发送有序广播只需修改一行代码，将sendBroadcast()方法改成sendOrderedBroadcast()。
+以上程序里发出的广播都是标准广播，现在发送有序广播。发送有序广播只需将sendBroadcast()方法改成sendOrderedBroadcast()。
 
-这个时候的广播是有先后顺序的，而且前面的广播接收器还可以将广播截断，以组织其继续传播。设定广播的先后顺序要在注册的时候进行设定。在AndroidManifese.xml中对MyBroadcastReceiver接收器进行修改，修改<intent-filter>标签，修改为<intent-filter android:priority="100">。并在MyBroadcastReceiver中的onReceive()方法中调用abortBroadcast()。表示将这条广播截断，后面的广播接收器将无法再接收到这条广播。运行程序，只有MyBroadcastReceiver接收到广播。
+这个时候的广播是有先后顺序的，而且前面的广播接收器还可以将广播截断，以阻止其继续传播。设定广播的先后顺序要在注册的时候进行设定。在AndroidManifese.xml中对MyBroadcastReceiver接收器进行修改，修改intent-filter标签，修改为intent-filter android:priority="100"。并在MyBroadcastReceiver中的onReceive()方法中调用abortBroadcast()。表示将这条广播截断，后面的广播接收器将无法再接收到这条广播。运行程序，只有MyBroadcastReceiver接收到广播。
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_7/Lab_7pictures/2_5.png)
 
