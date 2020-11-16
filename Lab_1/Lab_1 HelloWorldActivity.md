@@ -20,4 +20,4 @@ HelloWorldActivity程序
 
 运行HelloWorldActivity程序，结果如图
 
-![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_1/1ab_1%pictures/1.png)
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_1/Lab_1pictures/1.png)
