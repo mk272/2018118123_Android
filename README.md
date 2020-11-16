@@ -4,6 +4,8 @@
 
 [实验项目](https://github.com/mk272/2018118123_Android/tree/master/Lab_1/Project)
 
+[实验报告](https://github.com/mk272/2018118123_Android/blob/master/Lab_1/Lab_1%20HelloWorldActivity.md)
+
 ------
 
 #### 实验二 活动的生命周期及几个回调函数的使用
