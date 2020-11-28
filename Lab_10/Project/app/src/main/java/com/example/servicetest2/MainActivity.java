@@ -1,12 +1,10 @@
-package com.example.servicetest;
+package com.example.servicetest2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.Bundle;
-import android.os.IBinder;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -21,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startService.setOnClickListener(this);
         stopService.setOnClickListener(this);
 
+        Button startIntentService = (Button)findViewById(R.id.start_intent_service);
+        startIntentService.setOnClickListener(this);
     }
 
     @Override
@@ -34,7 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent stopIntent = new Intent(this,MyService.class);
                 stopService(stopIntent);
                 break;
-
+            case R.id.start_intent_service:
+                Log.d("MainActivity","Thread id is"+Thread.currentThread().getId());
+                Intent intentService = new Intent(this,MyIntentService.class);
+                startService(intentService);
+                break;
             default:
                 break;
         }
