@@ -16,6 +16,8 @@
 
 #### 实验内容
 
+一、子服务的绑定
+
 1、布局
 
 在activity_main.xml文件中定义BIND SERVICE按钮和UNBIND SERVICE按钮，界面如图
@@ -117,6 +119,42 @@ public void onClick(View v) {
 点击UNBIND SERVICE按钮，logcat打印日志如下
 
 ![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_11/Lab_11pictures/11_3.png)
+
+二、子服务代码运行在异步任务
+
+以下载示例为例
+
+运行程序
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_11/Lab_11pictures/11_4.png)
+
+程序一启动就会申请访问SD卡的权限，点击ALLOW后界面如图
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_11/Lab_11pictures/11_5.png)
+
+点击START DOWNLOAD按钮就可以下载
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_11/Lab_11pictures/11_6.png)
+
+下载过程中可以下拉系统状态栏查看实时的下载速度
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_11/Lab_11pictures/11_7.png)
+
+同时，可以点击PAUSE DOWMLOAD按钮或者CANCEL DOWNLOAN按钮，或者断网来暂停、取消该程序的下载
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_11/Lab_11pictures/11_8.png)
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_11/Lab_11pictures/11_9.png)
+
+无异常，下载成功后，界面会显示下载成功的提示
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_11/Lab_11pictures/11_10.png)
+
+查看SD卡的Download目录
+
+![Image](https://github.com/mk272/2018118123_Android/raw/master/Lab_11/Lab_11pictures/11_11.png)
+
+可以看到，文件已经下载下来了
 
 ------
 
