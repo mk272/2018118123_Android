@@ -61,3 +61,11 @@
 [实验项目](https://github.com/mk272/2018118123_Android/tree/master/Lab_8/Project)
 
 [实验报告](https://github.com/mk272/2018118123_Android/blob/master/Lab_8/Lab_8%20子线程程序框架.md)
+
+------
+
+#### 实验九 
+
+[实验项目](https://github.com/mk272/2018118123_Android/tree/master/Lab_8/Project)
+
+[实验报告](https://github.com/mk272/2018118123_Android/blob/master/Lab_9/Lab_9%20异步任务的隐含子线程程序框架.md)
