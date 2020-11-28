@@ -77,3 +77,11 @@
 [实验项目](https://github.com/mk272/2018118123_Android/tree/master/Lab_10/Project)
 
 [实验报告](https://github.com/mk272/2018118123_Android/blob/master/Lab_10/Lab_10%20服务.md)
+
+------
+
+#### 实验十一 子服务的绑定，子服务代码运行在异步任务
+
+[实验项目](https://github.com/mk272/2018118123_Android/tree/master/Lab_11/Project)
+
+[实验报告](https://github.com/mk272/2018118123_Android/blob/master/Lab_11/Lab_11%20子服务的绑定.md)
