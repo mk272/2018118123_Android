@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/category_no"
+        android:orderInCategory="100"
+        android:title="未分类"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/category_work"
+        android:title="工作"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/category_travel"
+        android:title="旅游"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/category_study"
+        android:title="学习"
+        app:showAsAction="never" />
+
+</menu>
