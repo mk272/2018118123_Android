@@ -95,7 +95,7 @@ public class Main2Activity extends AppCompatActivity {
         //导航栏+侧滑菜单
         toolbar = findViewById(R.id.main_toolbar);
        // setSupportActionBar(toolbar);
-        //toolbar.inflateMenu(R.menu.main2);
+        toolbar.inflateMenu(R.menu.main2);
         drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);//
@@ -105,7 +105,18 @@ public class Main2Activity extends AppCompatActivity {
                 drawer.openDrawer(GravityCompat.START);
             }
         });
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.memo_remove:
+                        toolbar.getMenu().findItem(R.id.memo_remove).setVisible(false);
+                        toolbar.inflateMenu(R.menu.main3);
+                }
+                return false;
+            }
 
+        });
         //动态加载侧滑菜单
         updateDrawLayout();
 //        categoryNames=getCategory();

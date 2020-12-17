@@ -16,6 +16,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.Menu;
@@ -31,6 +32,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -100,6 +103,7 @@ public class edit_memo extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
+
                         case R.id.action_delete_note:
                             AlertDialog.Builder dialog = new AlertDialog.Builder(edit_memo.this);
                             dialog.setMessage("是否删除此笔记？");
@@ -131,6 +135,7 @@ public class edit_memo extends AppCompatActivity {
                             String title = getFirstLine(memoText.getText().toString());//获取多行文本框的第一行内容作为标题
                             String content = memoText.getText().toString();//获取多行文本框的全部文本
                             String CurrentTime = getCurrentTime();//获取当前提交的时间
+
                             //增、改
                             if(flag==1) {//新建备忘信息
                                 ContentValues values1 = new ContentValues();
@@ -154,14 +159,16 @@ public class edit_memo extends AppCompatActivity {
                             }
                             else if(flag==0){//修改备忘信息
                                 db.execSQL("UPDATE memo_1 SET title = ?,content = ?, modified_date= ?,memoType= ?," +
-                                                "alarm_date= ?" + "WHERE id = ? ",
+                                                "alarm_date=?"+ "WHERE id = ? ",
                                         new String[]{title,content,CurrentTime,memoType,alarmResult,tempID});
                                 Toast.makeText(mContext, "更新完毕"+tempID, Toast.LENGTH_SHORT).show();
 
                             }
+
                             Intent intent=new Intent(edit_memo.this,Main2Activity.class);
                             startActivity(intent);
                             return true;
+
                     }
                 return false;
             }
@@ -206,6 +213,7 @@ public class edit_memo extends AppCompatActivity {
         String res=simpleDateFormat.format(date);
         return res;
     }
+
 private void get_intentMemo(){
     my_memo=(memo)getIntent().getSerializableExtra("memo_data");
     flag=getIntent().getIntExtra("flag",-1);//-1是默认返回值
@@ -221,7 +229,10 @@ private void get_intentMemo(){
         }
         else{
             clearAlarmBtn.setVisibility(View.VISIBLE);
-            alarmText.setText("");
+            //dbOpenHelper = new DBOpenHelper(mContext, "My_memo.db", null, 1);
+            //db = dbOpenHelper.getReadableDatabase();
+            //String text=(String) db.query("memo_1","alarm_date", (String) my_memo.getId());
+            alarmText.setText(my_memo.getAlarm_date());
         }
     }else if(flag==1){
         titleTxt.setText("添加备忘信息");
@@ -340,13 +351,16 @@ private void get_intentMemo(){
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         timeImage=(ImageView)findViewById(R.id.timeImage);
 
+        //alert_intent = new Intent(edit_memo.this,AlarmReceiver.class);
+        alert_intent = new Intent(edit_memo.this,AlarmReceiver.class);
+        alert_intent.setAction("VIDEO_TIMER");
+        pi = PendingIntent.getBroadcast(edit_memo.this, 0, alert_intent, 0);
 
-        alert_intent = new Intent(edit_memo.this, ClockActivity.class);
         timeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //dateFlag=false;
-                //timeFlag=false;
+                //dateFlag=true;
+                //timeFlag=true;
                 Calendar currentTime = Calendar.getInstance();
                 cale = Calendar.getInstance();
                 cale.setTimeInMillis(System.currentTimeMillis());
@@ -363,9 +377,11 @@ private void get_intentMemo(){
                         alarmResult+= "\n"+(monthOfYear+1)+"-"+dayOfMonth+"";
                         dateFlag=true;
                         cale.set(alert_year,alert_month,alert_day, alert_hour,alert_min,alert_second);
+
                         alarmText.setText(alarmResult);
                         clearAlarmBtn.setVisibility(View.VISIBLE);
                         Toast.makeText(getApplicationContext(), alarmResult, Toast.LENGTH_SHORT).show();
+
                     }
                 }
                         ,cale.get(Calendar.YEAR)
@@ -388,8 +404,16 @@ private void get_intentMemo(){
                 }, cale.get(Calendar.HOUR_OF_DAY), cale.get(Calendar.MINUTE), true)
                         .show();
 
+                // PendingIntent这个类用于处理即将发生的事情
+                //PendingIntent sender = PendingIntent.getBroadcast(this, 0, intent, 0);
+                AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
+                am.set(AlarmManager.RTC_WAKEUP, cale.getTimeInMillis(), pi);
+                // AlarmManager.ELAPSED_REALTIME_WAKEUP表示闹钟在睡眠状态下会唤醒系统并执行提示功能，该状态下闹钟使用相对时间
+                // SystemClock.elapsedRealtime()表示手机开始到现在经过的时间
+                //am.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,SystemClock.elapsedRealtime(), 10 * 1000, pi);
             }
         });
+
 
         alarmText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -433,9 +457,16 @@ private void get_intentMemo(){
                     }
                 }, cale.get(Calendar.HOUR_OF_DAY), cale.get(Calendar.MINUTE), true)
                         .show();
+                AlarmManager am = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+               am.set(AlarmManager.RTC_WAKEUP, cale.getTimeInMillis(), pi);
+                //am.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,SystemClock.elapsedRealtime(), 10 * 1000, pi);
+
 
             }
         });
+
+
+
 //        System.out.println("xx:"+timeFlag);
 //        if(timeFlag && dateFlag){
 //            //如果两个对话框都确认了

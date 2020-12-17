@@ -55,10 +55,11 @@
             android:layout_weight="1"
             android:background="@drawable/item_shape" />
         <LinearLayout
-            android:layout_width="370dp"
+            android:layout_width="400dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_weight="1.8">
+            android:layout_weight="1.8"
+            android:layout_margin="-3dp">
 
             <Button
                 android:id="@+id/clearAlarmBtn"
@@ -66,20 +67,23 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
                 android:text="取消提醒"
+                android:layout_marginTop="-4dp"
                 android:visibility="invisible"
+
                 ></Button>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="460dp"
+            android:layout_height="35dp"
             android:layout_weight="2"
             android:orientation="vertical"
+            android:layout_margin="-6dp"
             >
 
             <TextView
                 android:id="@+id/alarmText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
                 android:gravity="center"
@@ -87,7 +91,8 @@
                 android:textColor="#ffffff"
                 android:textAlignment="center"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/item_shape"></TextView>
+                android:background="@drawable/item_shape"
+                android:layout_marginTop="1dp"></TextView>
         </LinearLayout>
 
 
@@ -105,9 +110,6 @@
             android:background="@drawable/item_shape"
             android:layout_marginLeft="12dp"
             />
-
-
-    <!--        android:gravity="start|top"-->
     <LinearLayout
         android:id="@+id/bottom_LinearLayout"
         android:layout_width="match_parent"
@@ -121,8 +123,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:src="@drawable/timeicon_foreground"></ImageView>
+            android:src="@drawable/mk_alarm"></ImageView>
 
     </LinearLayout>
+    <!--        android:gravity="start|top"-->
+
 
 </LinearLayout>
