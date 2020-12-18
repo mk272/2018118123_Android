@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.IBinder;
 import android.provider.MediaStore;
 
+//Service类暂时无用到
 public class AlertService extends Service {
     public AlertService() {
     }

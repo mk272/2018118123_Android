@@ -95,7 +95,7 @@ public class Main2Activity extends AppCompatActivity {
         //导航栏+侧滑菜单
         toolbar = findViewById(R.id.main_toolbar);
        // setSupportActionBar(toolbar);
-        toolbar.inflateMenu(R.menu.main2);
+
         drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);//
@@ -105,6 +105,9 @@ public class Main2Activity extends AppCompatActivity {
                 drawer.openDrawer(GravityCompat.START);
             }
         });
+
+        /**批量删除功能按钮，未实现
+        toolbar.inflateMenu(R.menu.main2);
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -116,7 +119,7 @@ public class Main2Activity extends AppCompatActivity {
                 return false;
             }
 
-        });
+        });**/
         //动态加载侧滑菜单
         updateDrawLayout();
 //        categoryNames=getCategory();
@@ -287,7 +290,7 @@ public class Main2Activity extends AppCompatActivity {
                             categoryNames.add(name);
                             navigationView.getMenu().add(1,categoryNames.size(),0,name);
                             navigationView.getMenu().findItem(categoryNames.size())
-                                    .setIcon(R.mipmap.ic_launcher) ;
+                                    .setIcon(R.drawable.mk_label) ;
                             db.execSQL("INSERT INTO category(memoType) values(?)",
                                     new String[]{name});
                             Toast.makeText(getApplicationContext(),"新建成功！",Toast.LENGTH_LONG).show();

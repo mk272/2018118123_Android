@@ -161,7 +161,8 @@ public class edit_memo extends AppCompatActivity {
                                 db.execSQL("UPDATE memo_1 SET title = ?,content = ?, modified_date= ?,memoType= ?," +
                                                 "alarm_date=?"+ "WHERE id = ? ",
                                         new String[]{title,content,CurrentTime,memoType,alarmResult,tempID});
-                                Toast.makeText(mContext, "更新完毕"+tempID, Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(mContext, "更新完毕"+tempID, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(mContext, "更新完毕", Toast.LENGTH_SHORT).show();
 
                             }
 
@@ -354,21 +355,23 @@ private void get_intentMemo(){
         //alert_intent = new Intent(edit_memo.this,AlarmReceiver.class);
         alert_intent = new Intent(edit_memo.this,AlarmReceiver.class);
         alert_intent.setAction("VIDEO_TIMER");
+        //PendingIntent这个类用于处理即将发生的事情
         pi = PendingIntent.getBroadcast(edit_memo.this, 0, alert_intent, 0);
 
         timeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //dateFlag=true;
-                //timeFlag=true;
-                Calendar currentTime = Calendar.getInstance();
+                dateFlag=false;
+                timeFlag=false;
+                final Calendar currentTime = Calendar.getInstance();
                 cale = Calendar.getInstance();
                 cale.setTimeInMillis(System.currentTimeMillis());
+
                 DatePickerDialog picker=new DatePickerDialog(edit_memo.this,new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int monthOfYear,
                                           int dayOfMonth) {
-                        //这里获取到的月份需要加上1哦~
+                        //这里获取到的月份需要加上1
 
                         alert_year=year;
                         alert_month=monthOfYear;
@@ -381,36 +384,42 @@ private void get_intentMemo(){
                         alarmText.setText(alarmResult);
                         clearAlarmBtn.setVisibility(View.VISIBLE);
                         Toast.makeText(getApplicationContext(), alarmResult, Toast.LENGTH_SHORT).show();
+                        //cale.getTimeInMillis()-currentTime.getTimeInMillis();
+                        //alarmManager.set(AlarmManager.RTC_WAKEUP, cale.getTimeInMillis()-currentTime.getTimeInMillis(), pi);
+
 
                     }
                 }
                         ,cale.get(Calendar.YEAR)
                         ,cale.get(Calendar.MONTH)
                         ,cale.get(Calendar.DAY_OF_MONTH));
+                //alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                        //SystemClock.elapsedRealtime(), 10 * 1000,pi);
+                //alarmManager.set(AlarmManager.RTC_WAKEUP, cale.getTimeInMillis(), pi);
                 picker.show();
+
+
                 new TimePickerDialog(edit_memo.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         alarmResult="";
-                       alarmResult += hourOfDay+"时"+minute+"分";
-                       Toast.makeText(getApplicationContext(), alarmResult, Toast.LENGTH_SHORT).show();
-                       alert_min=minute;
-                       alert_hour=hourOfDay;
-                       alert_second=0;
-                       timeFlag=true;
+                        alarmResult += hourOfDay+"时"+minute+"分";
+                        Toast.makeText(getApplicationContext(), alarmResult, Toast.LENGTH_SHORT).show();
+                        alert_min=minute;
+                        alert_hour=hourOfDay;
+                        alert_second=0;
+                        timeFlag=true;
 
                     }
 
                 }, cale.get(Calendar.HOUR_OF_DAY), cale.get(Calendar.MINUTE), true)
                         .show();
 
-                // PendingIntent这个类用于处理即将发生的事情
-                //PendingIntent sender = PendingIntent.getBroadcast(this, 0, intent, 0);
-                AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
-                am.set(AlarmManager.RTC_WAKEUP, cale.getTimeInMillis(), pi);
+                alarmManager.set(AlarmManager.RTC_WAKEUP, cale.getTimeInMillis(), pi);
+
                 // AlarmManager.ELAPSED_REALTIME_WAKEUP表示闹钟在睡眠状态下会唤醒系统并执行提示功能，该状态下闹钟使用相对时间
                 // SystemClock.elapsedRealtime()表示手机开始到现在经过的时间
-                //am.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,SystemClock.elapsedRealtime(), 10 * 1000, pi);
+                //alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,SystemClock.elapsedRealtime(), 10 * 1000, pi);
             }
         });
 
@@ -457,9 +466,8 @@ private void get_intentMemo(){
                     }
                 }, cale.get(Calendar.HOUR_OF_DAY), cale.get(Calendar.MINUTE), true)
                         .show();
-                AlarmManager am = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-               am.set(AlarmManager.RTC_WAKEUP, cale.getTimeInMillis(), pi);
-                //am.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,SystemClock.elapsedRealtime(), 10 * 1000, pi);
+
+                //alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,SystemClock.elapsedRealtime(), 10 * 1000, pi);
 
 
             }
@@ -468,12 +476,12 @@ private void get_intentMemo(){
 
 
 //        System.out.println("xx:"+timeFlag);
-//        if(timeFlag && dateFlag){
-//            //如果两个对话框都确认了
-//            //alarmManager.set(AlarmManager.RTC_WAKEUP, cale.getTimeInMillis(),pi);
-//            Toast.makeText(getApplicationContext(),"设置定时器成功",Toast.LENGTH_SHORT).show();
-//
-//        }
+        //if(timeFlag && dateFlag){
+            //如果两个对话框都确认了
+            //alarmManager.set(AlarmManager.RTC_WAKEUP, cale.getTimeInMillis(),pi);
+            //Toast.makeText(getApplicationContext(),"设置定时器成功",Toast.LENGTH_SHORT).show();
+
+      // }
 
     }
 

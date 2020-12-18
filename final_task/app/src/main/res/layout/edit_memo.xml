@@ -48,7 +48,7 @@
 
         <Spinner
             android:id="@+id/spinner_category"
-            android:layout_width="300dp"
+            android:layout_width="330dp"
             android:layout_height="match_parent"
             android:layout_gravity="left"
             android:layout_margin="3dp"

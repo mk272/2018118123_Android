@@ -42,9 +42,9 @@ public class AlarmReceiver extends BroadcastReceiver {
             // API16之后才支持
             Notification notify = new Notification.Builder(context)
                     .setSmallIcon(R.drawable.ic_menu_share)
-                    .setTicker("TickerText:" + "您有新短消息，请注意查收！")
-                    .setContentTitle("Notification Title")
-                    .setContentText("This is the notification message")
+                    .setTicker("TickerText:" + "您有一条备忘录，请注意查收！")
+                    .setContentTitle("黄同学的备忘录")
+                    .setContentText("您有一条备忘录，请注意查收！")
                     .setContentIntent(pendingIntent).setNumber(1).build(); // 需要注意build()是在API
             // level16及之后增加的，API11可以使用getNotificatin()来替代
             notify.flags |= Notification.FLAG_AUTO_CANCEL; // FLAG_AUTO_CANCEL表明当通知被用户点击时，通知将被清除。
