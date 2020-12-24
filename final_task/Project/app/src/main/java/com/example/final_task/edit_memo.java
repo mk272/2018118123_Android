@@ -106,20 +106,21 @@ public class edit_memo extends AppCompatActivity {
 
                         case R.id.action_delete_note:
                             AlertDialog.Builder dialog = new AlertDialog.Builder(edit_memo.this);
-                            dialog.setMessage("是否删除此笔记？");
+                            dialog.setMessage("是否删除此备忘录？");
                             dialog.setCancelable(false);//dialog弹出后会点击屏幕或物理返回键，dialog不消失
                             dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                 }
                             });
-                            dialog.setPositiveButton("删除id为"+tempID+"的记录？", new DialogInterface.OnClickListener() {
+                            //tempID 备忘录id
+                            dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     dbOpenHelper = new DBOpenHelper(mContext, "My_memo.db", null, 1);
                                     db = dbOpenHelper.getWritableDatabase();
                                     db.execSQL("DELETE FROM memo_1 WHERE id = ?", new String[]{tempID});
-                                    Toast.makeText(mContext, "删除完毕"+tempID, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(mContext, "删除完毕", Toast.LENGTH_SHORT).show();
                                     Intent intent=new Intent(edit_memo.this,Main2Activity.class);
                                     startActivity(intent);
                                 }
@@ -467,7 +468,7 @@ private void get_intentMemo(){
                 }, cale.get(Calendar.HOUR_OF_DAY), cale.get(Calendar.MINUTE), true)
                         .show();
 
-                //alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,SystemClock.elapsedRealtime(), 10 * 1000, pi);
+                alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,SystemClock.elapsedRealtime(), 10 * 1000, pi);
 
 
             }
