@@ -93,3 +93,11 @@
 [实验项目](https://github.com/mk272/2018118123_Android/tree/master/Lab_12/Project)
 
 [实验报告](https://github.com/mk272/2018118123_Android/blob/master/Lab_12/Lab_12%20Material%20Design.md)
+
+------
+
+#### 课程设计 备忘录
+
+[实验项目](https://github.com/mk272/2018118123_Android/tree/master/final_task/Project)
+
+[实验报告](https://github.com/mk272/2018118123_Android/tree/master/final_task/备忘录.md)
